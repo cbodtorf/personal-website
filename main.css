@@ -1,0 +1,378 @@
+@import url();
+.browser {
+  background-color: #EBEBEB;
+  border-radius: 4px;
+  margin: 50px auto;
+  width: 90%;
+  box-shadow: 0px 3px 30px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; }
+
+.browser-header {
+  flex-basis: auto;
+  height: 35px;
+  background: #ebebeb;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ebebeb), color-stop(100%, #d9d9d9));
+  border-bottom: 1px solid #969696;
+  display: flex; }
+
+.browser-btns {
+  height: 35px;
+  display: inline-block;
+  padding: 0 10px;
+  line-height: 38px;
+  width: 55px;
+  flex-basis: auto; }
+
+.browser-btn {
+  width: 10px;
+  height: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  display: inline-block;
+  margin: 1px; }
+
+.browser-btn.close {
+  background-color: #FD615B; }
+
+.browser-btn.retract {
+  background-color: #FDBC40; }
+
+.browser-btn.expand {
+  background-color: #33C84A; }
+
+.tabs {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  line-height: 35px;
+  max-height: 35px;
+  display: inline-block;
+  padding: 0 12px; }
+  .tabs .tab {
+    color: #333;
+    float: left;
+    margin: 10px -10px 0;
+    border-top-right-radius: 25px 170px;
+    border-top-left-radius: 20px 90px;
+    padding: 0 30px 0 25px;
+    height: 170px;
+    background: #CBCCCC;
+    position: relative;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    width: 100px;
+    border: 1px solid #B4B4B4;
+    font-size: 11px;
+    font-family: Verdana, sans-serif;
+    line-height: 25px;
+    cursor: pointer; }
+    .tabs .tab:before, .tabs .tab:after {
+      content: "";
+      background: transparent;
+      height: 20px;
+      width: 20px;
+      border-radius: 100%;
+      border-width: 10px;
+      top: 0px;
+      border-style: solid;
+      position: absolute; }
+    .tabs .tab:before {
+      border-color: transparent #CBCCCC transparent transparent;
+      -webkit-transform: rotate(50deg);
+      left: -23px; }
+    .tabs .tab:after {
+      border-color: transparent transparent transparent #CBCCCC;
+      -webkit-transform: rotate(-50deg);
+      right: -17px; }
+    .tabs .tab .fa {
+      font-size: 13px; }
+    .tabs .tab .close {
+      position: absolute;
+      right: 25px;
+      top: 0px;
+      display: inline-block;
+      color: #888;
+      margin-left: 5px; }
+    .tabs .tab .close:after {
+      position: absolute;
+      content: "";
+      width: 139px;
+      display: block;
+      height: 1px;
+      background: #969696;
+      z-index: 3;
+      top: 24px;
+      right: -15px;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.8); }
+  .tabs .tab.active {
+    background: #EBEEEB; }
+  .tabs .tab.active:before {
+    border-color: transparent #EBEEEB transparent transparent;
+    z-index: 2; }
+  .tabs .tab.active:after {
+    border-color: transparent transparent transparent #EBEEEB;
+    z-index: 2; }
+  .tabs .tab.active .close:after {
+    display: none; }
+
+.browser-bar {
+  flex-basis: auto;
+  height: 28px;
+  background: #EBEEEB;
+  z-index: 15;
+  padding: 6px;
+  border-bottom: 1px solid #aaa;
+  display: flex; }
+  .browser-bar .button {
+    flex-basis: auto;
+    text-align: center;
+    font-size: 17px;
+    color: #6D6D6E;
+    padding: 3px;
+    display: inline-block;
+    width: 20px;
+    border: 1px solid #EBEEEB; }
+  .browser-bar .button:not(.inactive):hover {
+    border: 1px solid #b4bfb4;
+    cursor: pointer;
+    border-radius: 3px; }
+  .browser-bar .button.inactive {
+    opacity: 0.3; }
+  .browser-bar .address {
+    flex: 1;
+    background: #fff;
+    border-radius: 3px;
+    margin: 0px 3px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 14px;
+    color: #555; }
+
+.page {
+  flex: 1;
+  background: white;
+  z-index: 10;
+  text-align: center;
+  overflow-y: auto;
+  position: relative; }
+
+.web-img {
+  width: 100%; }
+
+nav {
+  display: inline-flex;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  z-index: 10;
+  background-color: white;
+  box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.1); }
+  nav h3 {
+    font-family: times;
+    border-left: 1px solid #dadada;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    font-size: 1.5em;
+    position: relative;
+    background-color: transparent;
+    z-index: 0; }
+    nav h3:hover {
+      font-weight: 500;
+      cursor: pointer; }
+
+.parallax {
+  background-color: #000;
+  background-image: url(./assets/stock.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective-origin-x: 100%; }
+
+.parallax__layer {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-top: 20%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin-x: 100%; }
+
+.parallax__layer--base {
+  box-sizing: border-box;
+  width: 70%;
+  height: 1800px;
+  top: -400px;
+  margin: 0 auto;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.1);
+  transform: translateZ(0) translateY(160vh);
+  display: inline-flex;
+  justify-content: space-around;
+  align-content: center;
+  flex-direction: column; }
+
+.projects {
+  top: 800px;
+  margin-bottom: 400px;
+  height: 600px;
+  background-color: transparent;
+  box-shadow: none; }
+  .projects .port-box img {
+    width: 400px;
+    margin-left: 10%;
+    border: 3px solid black;
+    border-radius: 20px; }
+
+.parallax__layer--back {
+  box-shadow: 0 -5px 10px 2px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  width: 100vw;
+  height: 1000px;
+  margin-top: 1400px;
+  transform: translateZ(-1px) scale(2); }
+
+.name-wrapper {
+  font-family: arial;
+  width: 80%;
+  margin: 0 auto;
+  left: -14px;
+  right: 0;
+  position: absolute;
+  bottom: 700px; }
+  .name-wrapper h1 {
+    text-align: center;
+    color: #000; }
+  .name-wrapper .portrait {
+    display: block;
+    transform: translateZ(-3px);
+    height: 300px;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 300px;
+    border-left: 20px solid white;
+    border-right: 20px solid white;
+    background-color: #000;
+    background: url("./assets/cb-web2.png");
+    background-size: cover;
+    background-position: center; }
+
+.ribbon {
+  position: relative;
+  display: block;
+  margin-left: -0.5rem;
+  margin-top: 50px;
+  top: 0;
+  left: 0;
+  width: 150px;
+  padding: 0.5rem 2rem;
+  color: #000;
+  font-size: 2rem;
+  background-color: #90FFC2; }
+  .ribbon::after {
+    border-color: #00a44a #00a44a transparent transparent;
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0px;
+    top: 100%;
+    border-width: 5px 0.3rem;
+    border-style: solid; }
+
+.box {
+  position: relative;
+  box-sizing: border-box;
+  border-top: 5px dashed #90FFC2;
+  border-bottom: 5px dashed #90FFC2;
+  background-color: white;
+  margin-bottom: 20px;
+  width: 110%;
+  margin-left: -5%;
+  display: inline-block;
+  box-shadow: 0px 20px 44px 22px rgba(0, 0, 0, 0.2);
+  font-family: times; }
+
+.box-2 img {
+  height: 100px;
+  margin-bottom: 20px; }
+
+.quote {
+  text-align: center;
+  font-size: 1.7em;
+  list-style-type: none;
+  overflow: hidden;
+  height: 486px;
+  position: relative;
+  top: -130px;
+  margin-bottom: -130px; }
+  .quote h2 {
+    position: absolute; }
+  .quote li {
+    box-sizing: border-box;
+    transform: rotateZ(-33deg) translateY(-138px) translateX(-374px);
+    margin-bottom: 20px;
+    border-bottom: 5px solid #00a44a;
+    background-color: #90FFC2;
+    color: #000;
+    width: 130vw;
+    padding: 5px; }
+    .quote li a:visited {
+      color: #A76BCC; }
+
+.logo {
+  width: 100px; }
+  .logo:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1); }
+
+.ribbon-name {
+  /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+  width: 70%;
+  position: relative;
+  background: #90FFC2;
+  padding: 1em 0.3em;
+  /* Adjust to suit */
+  margin: 2em auto 0em;
+  /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */ }
+
+.ribbon-name:before, .ribbon-name:after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -1em;
+  border: 1.5em solid #67ffac;
+  z-index: -1; }
+
+.ribbon-name:before {
+  left: -2em;
+  border-right-width: 1.5em;
+  border-left-color: transparent; }
+
+.ribbon-name:after {
+  right: -2em;
+  border-left-width: 1.5em;
+  border-right-color: transparent; }
+
+.ribbon-name .ribbon-name-content:before, .ribbon-name .ribbon-name-content:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-style: solid;
+  border-color: #00a44a transparent transparent transparent;
+  bottom: -1em; }
+
+.ribbon-name .ribbon-name-content:before {
+  left: 0;
+  border-width: 1em 0 0 1em; }
+
+.ribbon-name .ribbon-name-content:after {
+  right: 0;
+  border-width: 1em 1em 0 0; }

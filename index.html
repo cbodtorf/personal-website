@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>cbodtorf</title>
+    <meta name="description" content="Portfolio">
+    <meta name="author" content="Caleb Bodtorf">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS
+        ################################################### -->
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/png" href="assets/logo-favicon.png">
+  </head>
+
+  <!-- MAIN
+      ################################################### -->
+  <body>
+    <div class="container">
+
+      <nav>
+        <img class="logo" src="assets/logo.svg" alt="logo"/>
+        <h3>Portfolio v1.2</h3>
+      </nav>
+
+      <!-- PARALAX WRAPPER
+          ################################################### -->
+      <div class="parallax">
+
+        <div class="parallax__layer parallax__layer--back">
+          <div class="name-wrapper">
+            <h1 class="ribbon-name"><strong class="ribbon-name-content">CALEB BODTORF</strong></h1>
+            <div class="portrait">
+                <!-- background image -->
+            </div>
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+
+          <!-- Who am I?
+              ################################################### -->
+              <div class="box box-1">
+                <h2 class="ribbon ribbon-1">who am i?</h2>
+                <ul class="quote">
+                    <li><b>Occupation</b> [ Web Developer ]</li>
+                    <li><b>Spirit Animal</b> [ Elephant ]</li>
+                    <li><b>Music</b> [ <a href="https://play.spotify.com/album/0uxYCpg9exHWSOmkXAMATU">Whale Noises</a> //
+                      <a href="https://sexbruisequestionmark.bandcamp.com/album/contusions-ep">Contusions</a> ]</li>
+                    <li><b>Transportation</b> [ Bicycle ]</li>
+                    <li><b>HQ</b> [ Charleston, SC ]</li>
+                </ul>
+              </div>
+
+              <!-- TECH
+                  ################################################### -->
+              <div class="box box-2">
+                <h2 class="ribbon ribbon-2">Tech</h2>
+                <img src="./assets/html.png" alt="" />
+                <img src="./assets/ng.png" alt="" />
+                <img src="./assets/css.png" alt="" />
+                <img src="./assets/sass.png" alt="" />
+                <img src="./assets/es.png" alt="" />
+                <img src="./assets/node.png" alt="" />
+                <img src="./assets/jq.png" alt="" />
+                <img src="./assets/gulp.png" alt="" />
+              </div>
+
+              <!-- PROJECT BROWSER
+                  ################################################### -->
+              <div class="box box-3">
+                <h2 class="ribbon ribbon-3">PROJECTS</h2>
+                <div class="browser">
+                  <div class="browser-header">
+                    <div class="browser-btns">
+                      <div class="browser-btn close"></div>
+                      <div class="browser-btn retract"></div>
+                      <div class="browser-btn expand"></div>
+                    </div>
+                    <ul class="tabs">
+                      <li id="yadaTab" class="tab active" data-id="http://www.theyada.us" data-img="assets/theyada-ss.png">
+                        <i class="fa"></i>The Yada<span class="close">x</span></li>
+                      <li id="photoTab" class="tab" data-id="http://samsquanch.surge.sh" data-img="assets/bigshots-ss.png">
+                        <i class="fa"></i>Photo Album<span class="close">x</span></li>
+                      <li id="ghostieTab" class="tab" data-id="http://ghosties.surge.sh" data-img="assets/ghosties-ss.png">
+                        <i class="fa"></i>Ghosties<span class="close">x</span></li>
+                      <li id="h2knowTab" class="tab" data-id="http://h2know.not-live" data-img="assets/h2know-ss.png">
+                        <i class="fa"></i>H2Know<span class="close">x</span></li>
+                    </ul>
+                  </div>
+                  <div class="browser-bar">
+                    <div class="button"><i class="fa fa-arrow-left"></i></div>
+                    <div class="button inactive"><i class="fa fa-arrow-right"></i></div>
+                    <div class="button"><i class="fa fa-rotate-right"></i></div>
+                    <input id="addressBar" value="http://www.theyada.us" class="address"/>
+                    <div class="button"><i class="fa fa-bars"></i></div>
+                  </div>
+                  <div class="page">
+                    <img id="webImg" class='web-img' src="assets/theyada-ss.png" alt="" />
+                  </div>
+                </div>
+              </div>
+
+        </div>
+
+
+      </div>
+    </div>
+    <script src="main.js" charset="utf-8"></script>
+  </body>
+</html>

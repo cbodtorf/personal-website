@@ -1,0 +1,248 @@
+@import "config";
+@import "utilities";
+@import "helpers";
+@import "browser";
+
+
+nav {
+  display: inline-flex;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  z-index: 10;
+  background-color: white;
+  box-shadow: 0 2px 3px 2px $color-shadow;
+
+  h3 {
+    font-family: $font-family--primary;
+    border-left: 1px solid $grey;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    font-size: 1.5em;
+    position: relative;
+    background-color: transparent;
+    z-index: 0;
+    &:hover {
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+}
+.parallax {
+  background-color: $black;
+  background-image: url(./assets/stock.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  // background-size: contain;
+  // background-size: 640px 400px;
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective-origin-x: 100%;
+}
+.parallax__layer {
+  position: absolute;
+  background-color: $color-shadow;
+  margin-top: 20%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin-x: 100%;
+}
+.parallax__layer--base {
+  box-sizing: border-box;
+  width: 70%;
+  height: 1800px;
+  top: -400px;
+  margin:0 auto;
+  box-shadow: 0 2px 2px 2px $color-shadow;
+  transform: translateZ(0) translateY(160vh);
+  display: inline-flex;
+  justify-content: space-around;
+  align-content: center;
+  flex-direction: column;
+}
+
+.projects {
+  top: 800px;
+  margin-bottom: 400px;
+  height: 600px;
+  background-color: transparent;
+  box-shadow: none;
+  .port-box {
+    img {
+      width: 400px;
+      margin-left: 10%;
+      border: 3px solid black;
+      border-radius: 20px;
+    }
+  }
+}
+
+.parallax__layer--back {
+  box-shadow: 0 -5px 10px 2px $color-shadow;
+  background-color: white;
+  width: 100vw;
+  height: 1000px;
+  margin-top: 1400px;
+  transform: translateZ(-1px) scale(2);
+}
+.name-wrapper {
+  font-family: $font-family--secondary;
+  width: 80%;
+  margin: 0 auto;
+  left: -14px;
+  right: 0;
+  position: absolute;
+  bottom: 700px;
+  h1 {
+    text-align: center;
+    color: $black;
+  }
+  .portrait {
+    display: block;
+    transform: translateZ(-3px);
+    height: 300px;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 300px;
+    border-left: 20px solid white;
+    border-right: 20px solid white;
+    background-color: $black;
+    background: url("./assets/cb-web2.png");
+    background-size: cover;
+    background-position: center;
+  }
+}
+.ribbon {
+  position: relative;
+  display: block;
+  margin-left: -0.5rem;
+  margin-top: 50px;
+  top: 0;
+  left: 0;
+  width: 150px;
+  padding: 0.5rem 2rem;
+  color: $black;
+  font-size: 2rem;
+  background-color: $color-primary;
+  &::after {
+      border-color: palette(primary, x-dark) palette(primary, x-dark) transparent transparent;
+      content: ' ';
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 0px;
+      top: 100%;
+      border-width: 5px 0.3rem;
+      border-style: solid;
+  }
+}
+
+.box {
+  position: relative;
+  box-sizing: border-box;
+  border-top: 5px dashed $color-primary;
+  border-bottom: 5px dashed $color-primary;
+  background-color: white;
+  margin-bottom: 20px;
+  width: 110%;
+  margin-left: -5%;
+  display: inline-block;
+  box-shadow: 0px 20px 44px 22px rgba(0,0,0,0.2);
+  font-family: $font-family--primary;
+}
+
+.box-2 {
+  img {
+    height: 100px;
+    margin-bottom: 20px;
+  }
+}
+
+.quote {
+  text-align: center;
+  font-size: 1.7em;
+  list-style-type: none;
+  overflow: hidden;
+  height: 486px;
+  position: relative;
+  top: -130px;
+  margin-bottom: -130px;
+  h2 {
+    position: absolute;
+  }
+  li {
+    box-sizing: border-box;
+    transform: rotateZ(-33deg) translateY(-138px) translateX(-374px);
+    margin-bottom: 20px;
+    border-bottom: 5px solid palette(primary, x-dark);
+    background-color: $color-primary;
+    color: $black;
+    width: 130vw;
+    padding: 5px;
+    a:visited {
+      color: $amethyst;
+    }
+  }
+}
+
+
+
+.logo {
+  width: 100px;
+  &:hover {
+    cursor: pointer;
+    background-color: $color-shadow;
+  }
+}
+
+.ribbon-name {
+ // font-size: 16px !important;
+ /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+
+ width: 70%;
+ position: relative;
+ background: $color-primary;
+ padding: 1em 0.3em; /* Adjust to suit */
+ margin: 2em auto 0em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+.ribbon-name:before, .ribbon-name:after {
+ content: "";
+ position: absolute;
+ display: block;
+ bottom: -1em;
+ border: 1.5em solid palette(primary, dark);
+ z-index: -1;
+}
+.ribbon-name:before {
+ left: -2em;
+ border-right-width: 1.5em;
+ border-left-color: transparent;
+}
+.ribbon-name:after {
+ right: -2em;
+ border-left-width: 1.5em;
+ border-right-color: transparent;
+}
+.ribbon-name .ribbon-name-content:before, .ribbon-name .ribbon-name-content:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: palette(primary, x-dark) transparent transparent transparent;
+ bottom: -1em;
+}
+.ribbon-name .ribbon-name-content:before {
+ left: 0;
+ border-width: 1em 0 0 1em;
+}
+.ribbon-name .ribbon-name-content:after {
+ right: 0;
+ border-width: 1em 1em 0 0;
+}
