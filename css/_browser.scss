@@ -165,6 +165,7 @@
   }
   .address {
     flex: 1;
+    font-family: Verdana, sans-serif;
     background: #fff;
     border-radius: 3px;
     margin: 0px 3px;
@@ -172,6 +173,28 @@
     padding: 5px;
     font-size: 14px;
     color: #555;
+    white-space: nowrap;
+    a {
+      text-decoration: none;
+    }
+    .info {
+      border-radius: 50%;
+      display: inline-flex;
+      border: 2px solid #6a6a6a;
+      width: 7px;
+      padding-left: 2px;
+      padding-right: 2px;
+      justify-content: center;
+      vertical-align: middle;
+      margin-bottom: 5px;
+      margin-right: 5px;
+      font-size: 0.6em;
+      &:hover {
+        cursor: pointer;
+        border: 2px solid $black;
+        color: $black
+      }
+    }
   }
 }
 
@@ -186,4 +209,8 @@
 
 .web-img {
   width: 100%;
+  display: none;
+}
+.active-img {
+  display: block;
 }

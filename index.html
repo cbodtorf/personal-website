@@ -22,6 +22,14 @@
       <nav>
         <img class="logo" src="assets/logo.svg" alt="logo"/>
         <h3>Portfolio v1.2</h3>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/caleb-bodtorf-5ba36a126">
+              <img src="assets/linkedin-logo.png" alt="linkedin" /></a>
+            <a href="https://github.com/cbodtorf">
+              <img src="assets/github-logo.png" alt="github" /></a>
+            <a href="https://twitter.com/cbodtorf">
+              <img src="assets/twitter.png" alt="twitter" /></a>
+        </div>
       </nav>
 
       <!-- PARALAX WRAPPER
@@ -56,14 +64,17 @@
                   ################################################### -->
               <div class="box box-2">
                 <h2 class="ribbon ribbon-2">Tech</h2>
-                <img src="./assets/html.png" alt="" />
-                <img src="./assets/ng.png" alt="" />
-                <img src="./assets/css.png" alt="" />
-                <img src="./assets/sass.png" alt="" />
-                <img src="./assets/es.png" alt="" />
-                <img src="./assets/node.png" alt="" />
-                <img src="./assets/jq.png" alt="" />
-                <img src="./assets/gulp.png" alt="" />
+                <div class="tech-logo">
+                  <img src="./assets/html.png" alt="" />
+                  <img src="./assets/ng.png" alt="" />
+                  <img src="./assets/css.png" alt="" />
+                  <img src="./assets/sass.png" alt="" />
+                  <img src="./assets/es.png" alt="" />
+                  <img src="./assets/node.png" alt="" />
+                  <img src="./assets/jq.png" alt="" />
+                  <img src="./assets/gulp.png" alt="" />
+                </div>
+                <canvas id="myChart" width="300" height="150"></canvas>
               </div>
 
               <!-- PROJECT BROWSER
@@ -78,13 +89,13 @@
                       <div class="browser-btn expand"></div>
                     </div>
                     <ul class="tabs">
-                      <li id="yadaTab" class="tab active" data-id="http://www.theyada.us" data-img="assets/theyada-ss.png">
+                      <li id="yadaTab" class="tab active" data-id="http://www.theyada.us">
                         <i class="fa"></i>The Yada<span class="close">x</span></li>
-                      <li id="photoTab" class="tab" data-id="http://samsquanch.surge.sh" data-img="assets/bigshots-ss.png">
+                      <li id="photoTab" class="tab" data-id="http://samsquanch.surge.sh">
                         <i class="fa"></i>Photo Album<span class="close">x</span></li>
-                      <li id="ghostieTab" class="tab" data-id="http://ghosties.surge.sh" data-img="assets/ghosties-ss.png">
+                      <li id="ghostieTab" class="tab" data-id="http://ghosties.surge.sh">
                         <i class="fa"></i>Ghosties<span class="close">x</span></li>
-                      <li id="h2knowTab" class="tab" data-id="http://h2know.not-live" data-img="assets/h2know-ss.png">
+                      <li id="h2knowTab" class="tab" data-id="http://h2know.not-live">
                         <i class="fa"></i>H2Know<span class="close">x</span></li>
                     </ul>
                   </div>
@@ -92,11 +103,17 @@
                     <div class="button"><i class="fa fa-arrow-left"></i></div>
                     <div class="button inactive"><i class="fa fa-arrow-right"></i></div>
                     <div class="button"><i class="fa fa-rotate-right"></i></div>
-                    <input id="addressBar" value="http://www.theyada.us" class="address"/>
+                    <div class="address">
+                      <span class="info">i</span>
+                      <a id="addressBar" target="_blank" href="http://www.theyada.us">http://www.theyada.us</a>
+                    </div>
                     <div class="button"><i class="fa fa-bars"></i></div>
                   </div>
                   <div class="page">
-                    <img id="webImg" class='web-img' src="assets/theyada-ss.png" alt="" />
+                    <img class='web-img active-img' src="assets/theyada-ss.jpg" data-id="http://www.theyada.us" alt="" />
+                    <img class='web-img' src="assets/bigshots-ss.jpg" data-id="http://samsquanch.surge.sh" alt="" />
+                    <img class='web-img' src="assets/ghosties-ss.png" data-id="http://ghosties.surge.sh" alt="" />
+                    <img class='web-img' src="assets/h2know-ss.jpg" data-id="http://h2know.not-live" alt="" />
                   </div>
                 </div>
               </div>
@@ -106,6 +123,7 @@
 
       </div>
     </div>
+    <script src="node_modules/chart.js/dist/Chart.js" charset="utf-8"></script>
     <script src="main.js" charset="utf-8"></script>
   </body>
 </html>

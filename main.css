@@ -142,13 +142,33 @@
     opacity: 0.3; }
   .browser-bar .address {
     flex: 1;
+    font-family: Verdana, sans-serif;
     background: #fff;
     border-radius: 3px;
     margin: 0px 3px;
     border: 1px solid #ccc;
     padding: 5px;
     font-size: 14px;
-    color: #555; }
+    color: #555;
+    white-space: nowrap; }
+    .browser-bar .address a {
+      text-decoration: none; }
+    .browser-bar .address .info {
+      border-radius: 50%;
+      display: inline-flex;
+      border: 2px solid #6a6a6a;
+      width: 7px;
+      padding-left: 2px;
+      padding-right: 2px;
+      justify-content: center;
+      vertical-align: middle;
+      margin-bottom: 5px;
+      margin-right: 5px;
+      font-size: 0.6em; }
+      .browser-bar .address .info:hover {
+        cursor: pointer;
+        border: 2px solid #000;
+        color: #000; }
 
 .page {
   flex: 1;
@@ -159,7 +179,11 @@
   position: relative; }
 
 .web-img {
-  width: 100%; }
+  width: 100%;
+  display: none; }
+
+.active-img {
+  display: block; }
 
 nav {
   display: inline-flex;
@@ -184,6 +208,19 @@ nav {
     nav h3:hover {
       font-weight: 500;
       cursor: pointer; }
+  nav .social {
+    width: 70%;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center; }
+    nav .social img {
+      box-sizing: border-box;
+      width: 30px;
+      margin-right: 10px; }
+      nav .social img:hover {
+        border-radius: 50%;
+        box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1);
+        background-color: #90FFC2; }
 
 .parallax {
   background-color: #000;
@@ -210,7 +247,7 @@ nav {
   box-sizing: border-box;
   width: 70%;
   height: 1800px;
-  top: -400px;
+  top: -200px;
   margin: 0 auto;
   box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.1);
   transform: translateZ(0) translateY(160vh);
@@ -260,7 +297,7 @@ nav {
     border-left: 20px solid white;
     border-right: 20px solid white;
     background-color: #000;
-    background: url("./assets/cb-web2.png");
+    background: url("./assets/cb-web2.jpg");
     background-size: cover;
     background-position: center; }
 
@@ -300,9 +337,19 @@ nav {
   box-shadow: 0px 20px 44px 22px rgba(0, 0, 0, 0.2);
   font-family: times; }
 
-.box-2 img {
-  height: 100px;
-  margin-bottom: 20px; }
+.box-2 .tech-logo {
+  margin: 0 auto;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .box-2 .tech-logo img {
+    height: 70px;
+    margin-bottom: 20px; }
+
+.box-2 canvas {
+  display: block;
+  margin-bottom: 25px; }
 
 .quote {
   text-align: center;

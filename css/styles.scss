@@ -30,6 +30,22 @@ nav {
       cursor: pointer;
     }
   }
+  .social {
+    width: 70%;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    img {
+      box-sizing: border-box;
+      width: 30px;
+      margin-right: 10px;
+      &:hover {
+        border-radius: 50%;
+        box-shadow: 0 0 3px 3px $color-shadow;
+        background-color: $color-primary;
+      }
+    }
+  }
 }
 .parallax {
   background-color: $black;
@@ -58,7 +74,7 @@ nav {
   box-sizing: border-box;
   width: 70%;
   height: 1800px;
-  top: -400px;
+  top: -200px;
   margin:0 auto;
   box-shadow: 0 2px 2px 2px $color-shadow;
   transform: translateZ(0) translateY(160vh);
@@ -114,7 +130,7 @@ nav {
     border-left: 20px solid white;
     border-right: 20px solid white;
     background-color: $black;
-    background: url("./assets/cb-web2.png");
+    background: url("./assets/cb-web2.jpg");
     background-size: cover;
     background-position: center;
   }
@@ -159,9 +175,22 @@ nav {
 }
 
 .box-2 {
-  img {
-    height: 100px;
-    margin-bottom: 20px;
+
+  .tech-logo {
+    margin: 0 auto;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    img {
+      height: 70px;
+      margin-bottom: 20px;
+    }
+  }
+
+  canvas {
+    display: block;
+    margin-bottom: 25px;
   }
 }
 
