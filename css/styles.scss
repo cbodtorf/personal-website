@@ -47,11 +47,20 @@ nav {
     }
   }
 }
+canvas.three-bkg {
+  z-index: -1;
+  top: -290px;
+  height: auto;
+  width: auto;
+  position: relative;
+}
 .parallax {
-  background-color: $black;
-  background-image: url(./assets/stock.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
+
+  background-color: transparent;
+  // background-color: $black;
+  // background-image: url(./assets/stock.jpg);
+  // background-repeat: no-repeat;
+  // background-position: center;
   // background-size: contain;
   // background-size: 640px 400px;
   perspective: 1px;
@@ -175,23 +184,36 @@ nav {
 }
 
 .box-2 {
-
+  .ribbon-2 {
+    margin-bottom: 0;
+  }
   .tech-logo {
+    position: relative;
+    width: 16em;
+    height: 16em;
+    padding: 2.8em;
+    border-radius: 50%;
     margin: 0 auto;
-    width: 100%;
-    display: inline-flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    margin-bottom: 20px;
+
     img {
       height: 70px;
       margin-bottom: 20px;
+      display: block;
+      position: absolute;
+      top: 50%; left: 50%;
+      margin: -2em;
     }
   }
 
-  canvas {
-    display: block;
-    margin-bottom: 25px;
-  }
+  .deg0 { transform: translate(8em); } /* 12em = half the width of the wrapper */
+  .deg45 { transform: rotate(45deg) translate(8em) rotate(-45deg); }
+  .deg90 { transform: rotate(90deg) translate(8em) rotate(-90deg); }
+  .deg135 { transform: rotate(135deg) translate(8em) rotate(-135deg); }
+  .deg180 { transform: translate(-8em); }
+  .deg225 { transform: rotate(225deg) translate(8em) rotate(-225deg); }
+  .deg270 { transform: rotate(270deg) translate(8em) rotate(-270deg); }
+  .deg315 { transform: rotate(315deg) translate(8em) rotate(-315deg); }
 }
 
 .quote {
