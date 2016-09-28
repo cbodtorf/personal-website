@@ -31,30 +31,32 @@
     ********************************/
     styles: function() {
 
-      var scene = new THREE.Scene();
-      var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.5, 1000 );
-
-      var renderer = new THREE.WebGLRenderer();
-      renderer.setSize( window.innerWidth * 2, window.innerHeight * 2 );
-      renderer.domElement.classList.add('parallax', 'parallax__layer', 'three-bkg');
-
-      var parLayer = document.querySelector('.parallax');
-      parLayer.appendChild( renderer.domElement );
-
-      var geometry = new THREE.OctahedronGeometry( 5,6 );
-      var material = new THREE.MeshDepthMaterial( { color: 0xdddddd, specular: 0x009900, shininess: 30, shading: THREE.FlatShading, wireframe: true} );
-      var cube = new THREE.Mesh( geometry, material );
-      scene.add( cube );
-
-      camera.position.z = 2;
-
-      function render() {
-      	requestAnimationFrame( render );
-        cube.rotation.x += 0.0001;
-        cube.rotation.y += 0.0001;
-      	renderer.render( scene, camera );
-      }
-      render();
+      // trying to incorporate 3js
+      // --
+      // var scene = new THREE.Scene();
+      // var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.5, 1000 );
+      //
+      // var renderer = new THREE.WebGLRenderer();
+      // renderer.setSize( window.innerWidth * 2, window.innerHeight * 2 );
+      // renderer.domElement.classList.add('parallax', 'parallax__layer', 'three-bkg');
+      //
+      // var parLayer = document.querySelector('.parallax');
+      // parLayer.appendChild( renderer.domElement );
+      //
+      // var geometry = new THREE.OctahedronGeometry( 5,6 );
+      // var material = new THREE.MeshDepthMaterial( { color: 0xdddddd, specular: 0x009900, shininess: 30, shading: THREE.FlatShading, wireframe: true} );
+      // var cube = new THREE.Mesh( geometry, material );
+      // scene.add( cube );
+      //
+      // camera.position.z = 2;
+      //
+      // function render() {
+      // 	requestAnimationFrame( render );
+      //   cube.rotation.x += 0.0001;
+      //   cube.rotation.y += 0.0001;
+      // 	renderer.render( scene, camera );
+      // }
+      // render();
 
     },
 

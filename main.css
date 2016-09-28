@@ -230,7 +230,10 @@ canvas.three-bkg {
   position: relative; }
 
 .parallax {
-  background-color: transparent;
+  background-color: #000;
+  background-image: url(./assets/stock.jpg);
+  background-position: center;
+  background-size: contain;
   perspective: 1px;
   height: 100vh;
   overflow-x: hidden;
