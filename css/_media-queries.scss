@@ -1,8 +1,28 @@
 @media only screen and (min-width: 700px) {
-
+  .parallax__layer--base {
+    width: 85%;
+  }
+  .quote {
+    font-size: 1.7em;
+    li {
+      transform: rotateZ(-33deg) translateY(-138px) translateX(-374px);
+      width: 180vw;
+      &:first-of-type {
+        margin-top: 0px;
+      }
+    }
+  }
+  .name-wrapper {
+      width: 80%;
+  }
 }
 
 
 @media only screen and (min-width: 1000px) {
-
+  .parallax__layer--base {
+    width: 70%;
+  }
+  .quote li {
+    width: 130vw;
+  }
 }

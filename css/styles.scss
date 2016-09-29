@@ -47,13 +47,13 @@ nav {
     }
   }
 }
-canvas.three-bkg {
-  z-index: -1;
-  top: -290px;
-  height: auto;
-  width: auto;
-  position: relative;
-}
+// canvas.three-bkg {
+//   z-index: -1;
+//   top: -290px;
+//   height: auto;
+//   width: auto;
+//   position: relative;
+// }
 .parallax {
 
   // background-color: transparent;
@@ -82,7 +82,7 @@ canvas.three-bkg {
 }
 .parallax__layer--base {
   box-sizing: border-box;
-  width: 70%;
+  width: 95%;
   height: 2000px;
   top: -200px;
   margin:0 auto;
@@ -120,9 +120,9 @@ canvas.three-bkg {
 }
 .name-wrapper {
   font-family: $font-family--secondary;
-  width: 80%;
+  width: 95%; // post-m
   margin: 0 auto;
-  left: -14px;
+  left: 0;
   right: 0;
   position: absolute;
   bottom: 700px;
@@ -134,7 +134,8 @@ canvas.three-bkg {
     display: block;
     transform: translateZ(-3px);
     height: 300px;
-    width: 60%;
+    // width: 60%; // pre-m
+    width: 85%; // post-m
     margin: 0 auto;
     margin-bottom: 300px;
     border-left: 20px solid white;
@@ -219,8 +220,9 @@ canvas.three-bkg {
 
 .quote {
   text-align: center;
-  font-size: 1.7em;
+  font-size: 4.3vw;
   list-style-type: none;
+  padding: 0; // post-m
   overflow: hidden;
   height: 486px;
   position: relative;
@@ -231,13 +233,17 @@ canvas.three-bkg {
   }
   li {
     box-sizing: border-box;
-    transform: rotateZ(-33deg) translateY(-138px) translateX(-374px);
     margin-bottom: 20px;
     border-bottom: 5px solid palette(primary, x-dark);
     background-color: $color-primary;
     color: $black;
-    width: 130vw;
+    // width: 130vw; // pre-m
+
+    width: 100%; // post-m
     padding: 5px;
+    &:first-of-type {
+      margin-top: 130px; // post-m
+    }
     a:visited {
       color: $amethyst;
     }
@@ -258,7 +264,8 @@ canvas.three-bkg {
  // font-size: 16px !important;
  /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
 
- width: 70%;
+ // width: 70%; // pre-m
+ width: 95%; // post-m
  position: relative;
  background: $color-primary;
  padding: 1em 0.3em; /* Adjust to suit */
@@ -298,3 +305,5 @@ canvas.three-bkg {
  right: 0;
  border-width: 1em 1em 0 0;
 }
+
+@import "media-queries";

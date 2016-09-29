@@ -222,13 +222,6 @@ nav {
         box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1);
         background-color: #90FFC2; }
 
-canvas.three-bkg {
-  z-index: -1;
-  top: -290px;
-  height: auto;
-  width: auto;
-  position: relative; }
-
 .parallax {
   background-color: #000;
   background-image: url(./assets/stock.jpg);
@@ -252,7 +245,7 @@ canvas.three-bkg {
 
 .parallax__layer--base {
   box-sizing: border-box;
-  width: 70%;
+  width: 95%;
   height: 2000px;
   top: -200px;
   margin: 0 auto;
@@ -285,9 +278,9 @@ canvas.three-bkg {
 
 .name-wrapper {
   font-family: arial;
-  width: 80%;
+  width: 95%;
   margin: 0 auto;
-  left: -14px;
+  left: 0;
   right: 0;
   position: absolute;
   bottom: 700px; }
@@ -298,7 +291,7 @@ canvas.three-bkg {
     display: block;
     transform: translateZ(-3px);
     height: 300px;
-    width: 60%;
+    width: 85%;
     margin: 0 auto;
     margin-bottom: 300px;
     border-left: 20px solid white;
@@ -383,8 +376,9 @@ canvas.three-bkg {
 
 .quote {
   text-align: center;
-  font-size: 1.7em;
+  font-size: 4.3vw;
   list-style-type: none;
+  padding: 0;
   overflow: hidden;
   height: 486px;
   position: relative;
@@ -394,13 +388,14 @@ canvas.three-bkg {
     position: absolute; }
   .quote li {
     box-sizing: border-box;
-    transform: rotateZ(-33deg) translateY(-138px) translateX(-374px);
     margin-bottom: 20px;
     border-bottom: 5px solid #00a44a;
     background-color: #90FFC2;
     color: #000;
-    width: 130vw;
+    width: 100%;
     padding: 5px; }
+    .quote li:first-of-type {
+      margin-top: 130px; }
     .quote li a:visited {
       color: #A76BCC; }
 
@@ -412,7 +407,7 @@ canvas.three-bkg {
 
 .ribbon-name {
   /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
-  width: 70%;
+  width: 95%;
   position: relative;
   background: #90FFC2;
   padding: 1em 0.3em;
@@ -453,3 +448,22 @@ canvas.three-bkg {
 .ribbon-name .ribbon-name-content:after {
   right: 0;
   border-width: 1em 1em 0 0; }
+
+@media only screen and (min-width: 700px) {
+  .parallax__layer--base {
+    width: 85%; }
+  .quote {
+    font-size: 1.7em; }
+    .quote li {
+      transform: rotateZ(-33deg) translateY(-138px) translateX(-374px);
+      width: 180vw; }
+      .quote li:first-of-type {
+        margin-top: 0px; }
+  .name-wrapper {
+    width: 80%; } }
+
+@media only screen and (min-width: 1000px) {
+  .parallax__layer--base {
+    width: 70%; }
+  .quote li {
+    width: 130vw; } }
