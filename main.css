@@ -460,7 +460,9 @@ nav {
       .quote li:first-of-type {
         margin-top: 0px; }
   .name-wrapper {
-    width: 80%; } }
+    width: 60%; }
+  .portrait {
+    width: 60%; } }
 
 @media only screen and (min-width: 1000px) {
   .parallax__layer--base {
